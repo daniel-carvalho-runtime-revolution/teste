@@ -1,0 +1,58 @@
+{
+  "ignore": [
+    "node_modules",
+    "dist",
+    "build",
+    ".git",
+    "coverage",
+    "*.log",
+    "*.lock"
+  ],
+  "typescript": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true
+  },
+  "javascript": {
+    "preferConst": true,
+    "noVar": true,
+    "preferArrowFunctions": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "react": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment"
+  },
+  "formatting": {
+    "indentSize": 2,
+    "lineLength": 100,
+    "quoteStyle": "single",
+    "semicolons": true,
+    "trailingComma": "es5"
+  },
+  "linting": {
+    "eslint": {
+      "extensions": [".ts", ".tsx", ".js", ".jsx"],
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "@typescript-eslint/explicit-function-return-type": "warn",
+        "@typescript-eslint/no-explicit-any": "error"
+      }
+    }
+  },
+  "testing": {
+    "jest": {
+      "testMatch": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]
+    }
+  }
+}
